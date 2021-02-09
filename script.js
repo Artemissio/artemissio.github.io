@@ -2,16 +2,13 @@ var previousLink;
 
 function ChangeTab(link, elementToDisplay){
     if (previousLink === link) return;
-
-    // let burgerMenu = document.getElementById("burger-menu");
-
-    // console.log(burgerMenu)
-
-    // if(burgerMenu.classList.contains("home-icon-link")){
-    //     showOrHideMenu();
-    // }
-
+    
     previousLink = link;
+
+    let burgerMenu = document.getElementById("burger-menu").children[0];
+    if(burgerMenu.innerText === "close"){
+        showOrHideMenu();
+    }
 
     // menu links
     let linkClass = "active-link";
@@ -39,7 +36,13 @@ function ChangeTab(link, elementToDisplay){
 
 function showOrHideMenu(){
     let menu = document.getElementById("menu");
-    menu.style.display = (menu.style.display === "" || menu.style.display === "")  ? "flex" : "";
+
+    if(menu.style.display === "" || menu.style.display === ""){
+        menu.style.display = "block";
+    }
+    else{
+        menu.style.display = "";
+    }
 
     let icon = document.getElementById("burger-menu-icon");
     document.getElementById("burger-menu-icon").innerText = icon.innerText === "menu" ? "close" : "menu";

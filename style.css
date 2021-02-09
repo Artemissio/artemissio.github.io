@@ -67,6 +67,7 @@ a:hover{
     padding: 1%;
     font-size: small;
     text-align: center;
+    /* height: 50px; */
 }
 
 .labs-list{
@@ -105,13 +106,18 @@ a:hover{
 
 .home{
     color: var(--main-background);
-    margin: 10px 0;
+    /* margin: 10px 0; */
 }
 
 .home-icon-link{
     display: none;
     color: var(--whitesmoke);
-    margin: 10px 5px;
+    margin: 5px;
+}
+
+.home-icon-link > i{
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .home:hover{
@@ -124,16 +130,19 @@ a:hover{
     width: 100%;
     flex: 1 1 auto;
     display: grid;
-    grid-template-columns: 25% 75%;
-    overflow-y: auto;
+    grid-template-columns: 220px 1fr;
+    /* overflow-y: auto; */
 }
 
 #menu{
     border-top: 1px solid var(--silver);
     background: var(--main-background);
     padding: 12px 0;
-    position: sticky;
+    display: block;
     flex-direction: column;
+    overflow-y: auto;
+    z-index: 2;
+    text-align: left;
 }
 
 .menu-item{
@@ -162,11 +171,20 @@ a:hover{
 
 #content{
     padding: 6px;
-    overflow-y: auto;
+    z-index: 1;
 }
 
+@media screen and (max-width: 800px){
+    .labs-list{
+        justify-content: end;
+    }
 
-@media screen and (max-width: 545px){
+    .lab-item{
+        margin: 1%;
+    }
+}
+
+@media screen and (max-width: 768px){
     .main{
         display: flex;
         flex-direction: column;
@@ -178,6 +196,11 @@ a:hover{
 
     .home, #menu{
         display: none;
+    }
+
+    #menu{
+        position: absolute;
+        width: 100%;
     }
 
     .home-icon-link{
