@@ -25,6 +25,10 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    cursor: pointer;
+}
+
 .flex{
     display: flex;
 }
@@ -104,6 +108,12 @@ a{
     margin: 10px 0;
 }
 
+.home-icon-link{
+    display: none;
+    color: var(--whitesmoke);
+    margin: 10px 5px;
+}
+
 .home:hover{
     border-color: var(--whitesmoke);
     color: var(--link);
@@ -123,6 +133,7 @@ a{
     background: var(--main-background);
     padding: 12px 0;
     position: sticky;
+    flex-direction: column;
 }
 
 .menu-item{
@@ -154,8 +165,22 @@ a{
     overflow-y: auto;
 }
 
-@media screen and (max-width: 420px){
+
+@media screen and (max-width: 545px){
     .main{
-        grid-template-columns: 35% 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-item{
+        margin: 0;
+    }
+
+    .home, #menu{
+        display: none;
+    }
+
+    .home-icon-link{
+        display: flex;
     }
 }

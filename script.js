@@ -3,6 +3,14 @@ var previousLink;
 function ChangeTab(link, elementToDisplay){
     if (previousLink === link) return;
 
+    // let burgerMenu = document.getElementById("burger-menu");
+
+    // console.log(burgerMenu)
+
+    // if(burgerMenu.classList.contains("home-icon-link")){
+    //     showOrHideMenu();
+    // }
+
     previousLink = link;
 
     // menu links
@@ -27,4 +35,12 @@ function ChangeTab(link, elementToDisplay){
     item.classList.replace(itemClass, activeItemClass);
     item?.classList.add(flex);
     //
+}
+
+function showOrHideMenu(){
+    let menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "" || menu.style.display === "")  ? "flex" : "";
+
+    let icon = document.getElementById("burger-menu-icon");
+    document.getElementById("burger-menu-icon").innerText = icon.innerText === "menu" ? "close" : "menu";
 }
