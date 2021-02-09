@@ -1,0 +1,161 @@
+body{
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    width: 100%;
+    line-height: 1.4rem;
+    background: var(--whitesmoke);
+    color: var(--dark);
+    text-align: justify;
+    box-sizing: border-box;
+    /* overflow-y: hidden; */
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    outline-style: none;
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    margin: auto;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.vertical-alignment{
+    flex-direction: column;
+}
+
+.horizontal-alignment{
+    flex-direction: row;
+}
+
+.title{
+    color: var(--main);
+}
+
+.icon{
+    margin: 0 10px 0 0;
+}
+
+.header{
+    background: var(--main-background);
+    color: var(--whitesmoke);
+    padding: 1%;
+    font-size: small;
+    text-align: center;
+}
+
+.labs-list{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shadow{
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 30%), 0 0 0 1px rgb(0 0 0 / 4%);
+}
+
+.no-border{
+    border: 0px !important;
+}
+
+.lab-item{
+    padding: 10px 15px;
+    text-align: center;
+    border-top: 3px solid #232f3e;
+    border-width: 3px 1px 1px 1px;
+    border-color: var(--darkgray);
+    background: var(--whitesmoke);
+    border-style: solid;
+    margin: 1% 0;
+    max-width: 50%;
+    min-width: 7%;
+    color: var(--link);
+    font-size: medium;
+}
+
+.lab-item:hover, .lab-item.active{
+    border-color: var(--link);
+    color: var(--whitesmoke);
+    background: var(--link);
+}
+
+.home{
+    color: var(--main-background);
+    margin: 10px 0;
+}
+
+.home:hover{
+    border-color: var(--whitesmoke);
+    color: var(--link);
+    background: var(--whitesmoke);
+}
+
+.main{    
+    width: 100%;
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    overflow-y: auto;
+}
+
+#menu{
+    border-top: 1px solid var(--silver);
+    background: var(--main-background);
+    padding: 12px 0;
+    position: sticky;
+}
+
+.menu-item{
+    color: var(--silver);
+    min-height: 36px;
+    flex-wrap: wrap;
+    padding: 6px;
+}
+
+.menu-item:hover{
+    color: var(--main);
+    cursor: pointer;
+}
+
+.active-link{
+    color: var(--main);
+}
+
+.item{
+    display: none;
+}
+
+.active-item{
+    flex-wrap: wrap;
+}
+
+#content{
+    padding: 6px;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 420px){
+    .main{
+        grid-template-columns: 35% 1fr;
+    }
+}
