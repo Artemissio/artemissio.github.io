@@ -115,14 +115,14 @@ a{
     flex: 1 1 auto;
     display: grid;
     grid-template-columns: 25% 75%;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 #menu{
     border-top: 1px solid var(--silver);
     background: var(--main-background);
     padding: 12px 0;
-    position: sticky;
+    /* position: sticky; */
 }
 
 .menu-item{
