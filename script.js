@@ -47,3 +47,26 @@ function showOrHideMenu(){
     let icon = document.getElementById("burger-menu-icon");
     document.getElementById("burger-menu-icon").innerText = icon.innerText === "menu" ? "close" : "menu";
 }
+
+function arrowList(){
+    let arrow = document.getElementById("expand");
+    let hiddenList = document.getElementById("labs-list-hidden");
+    let content = document.getElementById("content");
+
+    if(arrow.innerText === "expand_less"){
+        arrow.innerText = "expand_more";
+        hiddenList.style.display = "none";
+        hiddenList.classList.remove("open-labs-list");
+
+        content.style.opacity = 1;
+        // content.style.backgroundColor = "";
+    }
+    else{
+        arrow.innerText = "expand_less";
+        hiddenList.style.display = "";
+        hiddenList.classList.add("open-labs-list");
+
+        content.style.opacity = 0;
+        // content.style.backgroundColor = "#333333";
+    }
+}

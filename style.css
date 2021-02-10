@@ -23,14 +23,25 @@ img{
 a{
     outline-style: none;
     text-decoration: none;
+    color: var(--link);
 }
 
 a:hover{
     cursor: pointer;
 }
 
+.wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .flex{
     display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
 }
 
 .center{
@@ -73,6 +84,55 @@ a:hover{
 .labs-list{
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.labs-list-hidden{
+    display: flex;
+}
+
+.labs-list-hidden a{
+    margin: 6px 24px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--dark);
+}
+
+.labs-list-hidden a:hover{
+    color: var(--main);
+}
+
+.labs-list-hidden-wrapper{
+    flex-direction: column;
+    background: var(--whitesmoke);
+    position: absolute;
+    width: 100%;
+    display: none;
+    margin: 12px 0;
+}
+
+.labs-list-hidden-wrapper > span{
+    justify-content: space-between;
+    padding: 0 24px;
+    font-weight: bold;
+}
+
+.open-labs-list{
+    position: absolute;
+    background: var(--whitesmoke);
+    width: 100%;
+    z-index: 3;
+}
+
+.expand{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--link);
+}
+
+.expand:hover{
+    cursor: pointer;
 }
 
 .shadow{
@@ -180,11 +240,17 @@ a:hover{
     }
 
     .lab-item{
-        margin: 1%;
+        padding: 5px 10px;
+        margin: 5px 3px;
     }
 }
 
 @media screen and (max-width: 768px){
+    /* .header{
+        position: sticky;
+        top: 0;
+    } */
+
     .main{
         display: flex;
         flex-direction: column;
@@ -205,5 +271,14 @@ a:hover{
 
     .home-icon-link{
         display: flex;
+    }
+
+    .labs-list{
+        display: none;
+    }
+
+    .labs-list-hidden-wrapper{
+        display: block;
+        position: relative;
     }
 }

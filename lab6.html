@@ -11,45 +11,82 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="labs-list flex horizontal-alignment">
-        <a class="lab-item shadow" href="lab1.html">Lab 1</a>
-        <a class="lab-item shadow" href="lab2.html">Lab 2</a>
-        <a class="lab-item shadow" href="lab3.html">Lab 3</a>
-        <a class="lab-item shadow" href="lab4.html">Lab 4</a>
-        <a class="lab-item shadow" href="lab5.html">Lab 5</a>
-        <a class="lab-item shadow active" href="lab6.html">Lab 6</a>
-        <a class="lab-item shadow" href="lab7.html">Lab 7</a>
-        <a class="lab-item shadow" href="lab8.html">Lab 8</a>
-        <a class="lab-item shadow" href="lab9.html">Lab 9</a>
-    </div>
-
-    <div class="header horizontal-alignment vertical-alignment flex shadow">
-        <a class="lab-item flex horizontal-alignment center space-between no-border home" href="index.html">
-            <i class="material-icons icon">home</i> Home</a>
-        <h2 class="center title">Лабораторна робота №6</h2>
-        <a class="flex horizontal-alignment center home-icon-link" href="index.html">
-            <i class="material-icons">home</i>
-        </a>
-        <a class="flex horizontal-alignment center home-icon-link" id="burger-menu" onclick="showOrHideMenu()">
-            <i class="material-icons" id="burger-menu-icon">menu</i>
-        </a>
-    </div>
-
-    <div class="main">
-        <div id="menu">
-            <a class="menu-item flex active-link" onclick="ChangeTab(this, '1')">Опис предметного середовища</a>
-            <a class="menu-item flex" onclick="ChangeTab(this, '2')">Загальна постановка задачі програми</a>
-            <a class="menu-item flex" onclick="ChangeTab(this, '3')">Постановка задачі лабораторної роботи №6</a>
-            <a class="menu-item flex" onclick="ChangeTab(this, '4')">Структура документа</a>
-            <a class="menu-item flex" onclick="ChangeTab(this, '5')">Висновок</a>
+    <div class="wrapper">
+        <div class="labs-list flex horizontal-alignment">
+            <a class="lab-item shadow" href="lab1.html">Lab 1</a>
+            <a class="lab-item shadow" href="lab2.html">Lab 2</a>
+            <a class="lab-item shadow" href="lab3.html">Lab 3</a>
+            <a class="lab-item shadow" href="lab4.html">Lab 4</a>
+            <a class="lab-item shadow" href="lab5.html">Lab 5</a>
+            <a class="lab-item shadow active" href="lab6.html">Lab 6</a>
+            <a class="lab-item shadow" href="lab7.html">Lab 7</a>
+            <a class="lab-item shadow" href="lab8.html">Lab 8</a>
+            <a class="lab-item shadow" href="lab9.html">Lab 9</a>
         </div>
 
-        <div id="content">
-            <div id="1" class="active-item">Опис предметного середовища</div>
-            <div id="2" class="item">Загальна постановка задачі програми</div>
-            <div id="3" class="item">Постановка задачі лабораторної роботи №6</div>
-            <div id="4" class="item">Структура документа</div>
-            <div id="5" class="item">Висновок</div>
+        <div class="labs-list-hidden-wrapper flex vertical-alignment">
+            <span class="flex">Лабораторні роботи
+                <i class="material-icons expand flex" id="expand" onclick="arrowList()">expand_more</i>
+            </span>
+    
+            <div class="labs-list-hidden vertical-alignment" id="labs-list-hidden" style="display: none;">
+                <a href="lab1.html">Лабораторна робота 1</a>
+                <a href="lab2.html">Лабораторна робота 2</a>
+                <a href="lab3.html">Лабораторна робота 3</a>
+                <a href="lab4.html">Лабораторна робота 4</a>
+                <a href="lab5.html">Лабораторна робота 5</a>
+                <a href="lab6.html" class="title">Лабораторна робота 6</a>
+                <a href="lab7.html">Лабораторна робота 7</a>
+                <a href="lab8.html">Лабораторна робота 8</a>
+                <a href="lab9.html">Лабораторна робота 9</a>
+            </div>
+        </div>    
+
+        <div class="header horizontal-alignment vertical-alignment flex shadow">
+            <a class="lab-item flex horizontal-alignment center space-between no-border home" href="index.html">
+                <i class="material-icons icon">home</i>Home
+            </a>
+            <h2 class="center title">Лабораторна робота №6</h2>
+            <a class="flex horizontal-alignment center home-icon-link" href="index.html">
+                <i class="material-icons">home</i>
+            </a>
+            <a class="flex horizontal-alignment center home-icon-link" id="burger-menu" onclick="showOrHideMenu()">
+                <i class="material-icons" id="burger-menu-icon">menu</i>
+            </a>
+        </div>
+
+        <div class="main">
+            <div id="menu">
+                <a class="menu-item flex active-link" onclick="ChangeTab(this, '1')">Опис предметного середовища</a>
+                <a class="menu-item flex" onclick="ChangeTab(this, '2')">Загальна постановка задачі програми</a>
+                <a class="menu-item flex" onclick="ChangeTab(this, '3')">Постановка задачі лабораторної роботи №6</a>
+                <a class="menu-item flex" onclick="ChangeTab(this, '4')">Структура документа</a>
+                <a class="menu-item flex" onclick="ChangeTab(this, '5')">Висновок</a>
+            </div>
+    
+            <div id="content">
+                <div id="1" class="active-item">
+                    <p>Опис предметного середовища</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse omnis officia illum, expedita
+                        velit odit quasi dolore doloribus facilis consequatur quam exercitationem nisi placeat voluptatibus 
+                        molestiae architecto? Ex eius saepe magnam laudantium animi distinctio optio error earum maiores 
+                        quidem quae suscipit quod et deleniti sequi debitis, sint veniam iure hic. Vero, facere nulla 
+                        cupiditate id distinctio impedit. Assumenda dignissimos explicabo amet deserunt asperiores aut 
+                        sapiente dicta adipisci quo mollitia ut quidem recusandae minima accusantium reiciendis illo, sit 
+                        nobis corporis id animi eum ex ducimus! Dolores repellat, ad ut velit sequi maxime odit animi quaerat
+                        impedit praesentium ex repellendus perspiciatis incidunt accusantium dolorem quod odio error illum tenetur ab 
+                        adipisci soluta laboriosam! A sunt quaerat, libero ipsa cumque vel modi minus accusantium sed, fugiat, 
+                        assumenda sint? Quis quaerat eveniet soluta obcaecati vitae! Dolore blanditiis illum explicabo obcaecati
+                        incidunt quia porro. Doloremque nulla sint saepe iste, tenetur odit at eveniet molestiae. 
+                        </p>
+                    <img src="4.jpg"/>
+                </div>
+                <div id="2" class="item">Загальна постановка задачі програми</div>
+                <div id="3" class="item">Постановка задачі лабораторної роботи №6</div>
+                <div id="4" class="item">Структура документа</div>
+                <div id="5" class="item">Висновок</div>
+            </div>
         </div>
     </div>
 </body>

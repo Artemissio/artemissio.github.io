@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link href="style.css" rel="stylesheet"/>
     <link href="root.css" rel="stylesheet"/>
+    <script src="script.js"></script>    
 </head>
 <body>
     <div class="header flex vertical-alignment">
@@ -28,8 +29,28 @@
         <a class="lab-item shadow" href="lab9.html">Lab 9</a>
     </div>
 
-    <div class="flex center">
-        <img src="3.jpg"/>
+    <div>
+        <div class="labs-list-hidden-wrapper flex vertical-alignment">
+            <span class="flex">Лабораторні роботи
+                <i class="material-icons expand flex" id="expand" onclick="arrowList()">expand_more</i>
+            </span>
+            
+            <div class="labs-list-hidden vertical-alignment" id="labs-list-hidden" style="display: none;">
+                <a href="lab1.html">Лабораторна робота 1</a>
+                <a href="lab2.html">Лабораторна робота 2</a>
+                <a href="lab3.html">Лабораторна робота 3</a>
+                <a href="lab4.html">Лабораторна робота 4</a>
+                <a href="lab5.html">Лабораторна робота 5</a>
+                <a href="lab6.html">Лабораторна робота 6</a>
+                <a href="lab7.html">Лабораторна робота 7</a>
+                <a href="lab8.html">Лабораторна робота 8</a>
+                <a href="lab9.html">Лабораторна робота 9</a>
+            </div>
+        </div>
+    
+        <div class="flex center">
+            <img src="3.jpg"/>
+        </div>
     </div>
 </body>
 </html>
