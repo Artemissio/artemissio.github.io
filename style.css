@@ -15,6 +15,40 @@ body{
     /* overflow-y: hidden; */
 }
 
+body.image{
+    background-image: url(mountains.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body.image div#main{
+    height: 100%;
+    color: var(--link);
+}
+
+body.image div#main i{
+    font-size: 8rem;
+}
+
+footer{
+    background: var(--whitesmoke);
+    height: 56px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--scrollbar);
+}
+
 img{
     width: 100%;
     height: 100%;
@@ -75,10 +109,9 @@ a:hover{
 .header{
     background: var(--main-background);
     color: var(--whitesmoke);
-    padding: 1%;
+    padding: 0.5%;
     font-size: small;
     text-align: center;
-    /* height: 50px; */
 }
 
 .labs-list{
@@ -90,32 +123,36 @@ a:hover{
     display: flex;
 }
 
-.labs-list-hidden a{
-    margin: 6px 24px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--dark);
-}
+    .labs-list-hidden a{
+        margin: 6px 24px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--dark);
+    }
 
-.labs-list-hidden a:hover{
-    color: var(--main);
-}
+        .labs-list-hidden a:hover{
+            color: var(--main);
+        }
 
-.labs-list-hidden-wrapper{
-    flex-direction: column;
-    background: var(--whitesmoke);
-    position: absolute;
-    width: 100%;
-    display: none;
-    margin: 12px 0;
-}
+            .labs-list-hidden-wrapper-background{
+                background: var(--whitesmoke);
+            }
 
-.labs-list-hidden-wrapper > span{
-    justify-content: space-between;
-    padding: 0 24px;
-    font-weight: bold;
-}
+    .labs-list-hidden-wrapper{
+        flex-direction: column;
+        background: var(--whitesmoke);
+        position: absolute;
+        width: 100%;
+        display: none;
+        margin: 12px 0;
+    }
+
+        .labs-list-hidden-wrapper > span{
+            justify-content: space-between;
+            padding: 0 24px;
+            font-weight: bold;
+        }
 
 .open-labs-list{
     position: absolute;
@@ -158,16 +195,22 @@ a:hover{
     font-size: medium;
 }
 
-.lab-item:hover, .lab-item.active{
-    border-color: var(--link);
-    color: var(--whitesmoke);
-    background: var(--link);
-}
+    .lab-item:hover, .lab-item.active{
+        border-color: var(--link);
+        color: var(--whitesmoke);
+        background: var(--link);
+    }
 
 .home{
     color: var(--main-background);
     /* margin: 10px 0; */
 }
+
+    .home:hover{
+        border-color: var(--whitesmoke);
+        color: var(--link);
+        background: var(--whitesmoke);
+    }
 
 .home-icon-link{
     display: none;
@@ -175,16 +218,10 @@ a:hover{
     margin: 5px;
 }
 
-.home-icon-link > i{
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.home:hover{
-    border-color: var(--whitesmoke);
-    color: var(--link);
-    background: var(--whitesmoke);
-}
+    .home-icon-link > i{
+        font-size: 30px;
+        font-weight: bold;
+    }
 
 .main{    
     width: 100%;
@@ -192,6 +229,17 @@ a:hover{
     display: grid;
     grid-template-columns: 220px 1fr;
     /* overflow-y: auto; */
+}
+
+/* #main{
+    background-image: url(mountains.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+
+#main h1{
+    line-height: 2.5rem;
 }
 
 #menu{
@@ -212,10 +260,10 @@ a:hover{
     padding: 6px;
 }
 
-.menu-item:hover{
-    color: var(--main);
-    cursor: pointer;
-}
+    .menu-item:hover{
+        color: var(--main);
+        cursor: pointer;
+    }
 
 .active-link{
     color: var(--main);
@@ -227,7 +275,19 @@ a:hover{
 
 .active-item{
     flex-wrap: wrap;
+    flex-direction: column;
 }
+
+    .active-item > h3.title, .active-item span.title{
+        font-weight: bold;
+        color: var(--dark);
+    }
+
+    .active-item > h3.title{
+        color: var(--link);
+        margin-left: 2rem;
+        margin-bottom: 0;
+    }
 
 #content{
     padding: 6px;
