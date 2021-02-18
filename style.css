@@ -76,6 +76,11 @@ table {
         display: none;
     }
 
+    table.compact{
+        font-size: 12px;
+        line-break: anywhere;
+    }
+
 footer{
     background: var(--whitesmoke);
     height: 56px;
@@ -345,6 +350,9 @@ a:hover{
 
     .active-item > div{
         margin-top: 20px;
+    }
+
+    .active-item > div:not(.single-content){
         display: none;
     }
 
