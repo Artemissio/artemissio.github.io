@@ -123,6 +123,7 @@ function ChangeContent(menu, sectionID, paragraphID = null){
         
             //     previousParagraph = paragraphID;
             // }
+            
             break;
 
         default: break;
