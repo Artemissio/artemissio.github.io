@@ -57,166 +57,485 @@
 
         <div class="main">
             <div id="menu">
-                <a class="menu-item flex active-link" onclick="ChangeTab(this, '1')">Опис предметного середовища</a>
-                <a class="menu-item flex" onclick="ChangeTab(this, '2')">Загальна постановка задачі програми</a>
-                <a class="menu-item flex" onclick="ChangeTab(this, '3')">Постановка задачі лабораторної роботи №2</a>
-                <a class="menu-item flex" onclick="ChangeTab(this, '4')">Структура документа</a>
-                <a class="menu-item flex" onclick="ChangeTab(this, '5')">Висновок</a>
+                <div>
+                    <a class="menu-item flex active-link" onclick="ShowSubmenus(this)">
+                        Тема, мета та постановка задачі
+                        <i class="material-icons">remove</i>
+                    </a>
+                    <a class="sub-menu sub-menu-visible active-link" onclick="ShowSection(this, '1', '1.1')">
+                        1.1 Тема, мета та постановка задачі
+                    </a>
+                </div>
+
+                <div>
+                    <a class="menu-item flex" onclick="ShowSubmenus(this)">
+                        Проектування ПЗ
+                        <i class="material-icons">add</i>
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '2', '2.1')">
+                        2.1 Таблиця класів
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '2', '2.2')">
+                        2.2 UML-діаграма класів
+                    </a>
+                </div>
+
+                <div>
+                    <a class="menu-item flex" onclick="ShowSubmenus(this)">
+                        Кодування ПЗ (програмування)
+                        <i class="material-icons">add</i>
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '3', '3.1')">
+                        3.1 Файлова структура проекту
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '3', '3.2')">
+                        3.2 Програмні коди класів з конструкторами
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '3', '3.3')">
+                        3.3 Програмний код класу Program. Результат виконання програми
+                    </a>
+                </div>
+
+                <div>
+                    <a class="menu-item flex" onclick="ShowSubmenus(this)">
+                        Впровадження та супроводження ПЗ              
+                        <i class="material-icons">add</i>     
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '4', '4.1')">
+                        4.1 Посилання на проект
+                    </a>
+                </div>
             </div>
     
             <div id="content">
                 <div id="1" class="active-item">
-                    <h3 class="title">Характеристика об’єкта автоматизації</h3>
+                    <h3 class="title">Тема, мета та постановка задачі лабораторної роботи №2</h3>
 
-                    <p>
-                        <span class="title">Детальний опис предметного середовища: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="1.1" class="active-paragraph">                   
+                        <p>
+                            <span class="title">Тема: </span>
+                            Конструктори. Модифікатори доступу в C# та UML. Діаграми класів. Відношення між класами
+                        </p>
+                        <p>
+                            <span class="title">Мета: </span>
+                            Здійснити об’єктно-орієнтоване проектування з урахуванням модифікаторів доступу 
+                            в C# и UML і добавлення конструкторів у діаграму класів та реалізація їх у 
+                            програмному коді. Вивчити особливості використання різних видів конструкторів. 
+                            Доповнити програму конструкторами різних видів.
+                        </p>
+                        <p>
+                            <span class="title">Постановка задачі: </span>
+                            <br>
+                            1.	Доповнити інтерфейси та реалізації класів методами-конструкторами класів (використати конструктори по умовчанню, ініціалізації (введення значень з клавіатури, завдання їх за виразами та через виклик інших методів-членів класу). 
+                            <br>
+                            2.	Протестувати програму, демонструючи послідовність викликів конструкторів виведенням на екран повідомлень про створення об’єктів
+                            <br>
+                            3.	Продемонструвати створення об’єктів за допомогою різних видів конструкторів: 
+                            <br>
 
-                    <p>
-                        <span class="title">Мета розробки проекту: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
-
-                    <p>
-                        <span class="title">Бізнес-задачі, що моделюються в системі, для досягнення мети: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
-
-                    <p>
-                        <span class="title">Бізнес-процеси, що здійснюються в системі: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
-
-                    <p>
-                        <span class="title">Сценарій дій системи: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                            <div style="margin-left: 20px;">
+                                3.1. через ініціалізацію значень атрибутів класів списком аргументів, використовуючи конструктор ініціалізації;
+                                <br>
+                                3.2. через присвоєння одних об’єктів іншим того самого типу, використовуючи конструктор копіювання;
+                                <br>
+                                3.3. створення об’єкта за допомогою конструктора за замовчуванням.
+                            </div>
+                        </p>
+                    </div>
                 </div>
+
                 <div id="2" class="item">
-                    <h3 class="title">Об’єктно-орієнтована декомпозиція предметного середовища</h3>
-
-                    <p>
-                        <span class="title">Лексичний та семантичний аналіз опису об’єкту управління: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
-                    
-                    <p>
-                        <span class="title">Об’єктно-орієнтовна декомпозиція предметного середовища: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
-                    
-                    <p>
-                        <span class="title">Функціональні вимоги замовника: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
-                </div>
-                <div id="3" class="item">
                     <h3 class="title">Проектування ПЗ</h3>
+
+                    <div id="2.1">
+                        <span class="title">2.1 Таблиця класів: </span>
+                        
+                        <table>
+                            <!-- <thead>
+                                <tr>
+                                    <th scope="col">Клас</th>
+                                    <th colspan="3">Інформація про клас</th>
+                                </tr>
+                            </thead> -->
+                            <tbody>
+                                <tr>
+                                    <th rowspan="10" scope="rowgroup" class="center divider">
+                                        Клієнт
+                                    </th>
+                                    <th colspan="2" scope="row" class="table-header">Атрибут</th>
+                                    <th colspan="3" scope="row" class="table-header">Призначення атрибутів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Name</th>
+                                    <td colspan="3" scope="row">Ім'я клієнта</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Surname</th>
+                                    <td colspan="3" scope="row">Прізвище клієнта</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Fullname</th>
+                                    <td colspan="3" scope="row">Повне клієнта</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Login</th>
+                                    <td colspan="3" scope="row">Логін клієнта</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Password</th>
+                                    <td colspan="3" scope="row">Пароль клієнта</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">BookedPlaces</th>
+                                    <td colspan="3" scope="row">Перелік заброньованих або куплених місць</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" scope="row" class="table-header">Методи</th>
+                                    <th colspan="3" scope="row" class="table-header">Опис методів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">User()</th>
+                                    <td colspan="3" scope="row">Конструктор за замовчуванням</th>
+                                </tr>
+                                <tr class="divider">
+                                    <td colspan="2" scope="row">User(name, surname, login, password)</th>
+                                    <td colspan="3" scope="row">Конструктор ініціалізації (за іменем, прізвищем, логіном та паролем)</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="12" scope="rowgroup" class="center divider">
+                                        Місце
+                                    </th>
+                                    <th colspan="2" scope="row" class="table-header">Атрибут</th>
+                                    <th colspan="3" scope="row" class="table-header">Призначення атрибутів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Plane</th>
+                                    <td colspan="3" scope="row">Посилання на літак</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Customer</th>
+                                    <td colspan="3" scope="row">Посилання на клієнта</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Price</th>
+                                    <td colspan="3" scope="row">Ціна</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">IsBought</th>
+                                    <td colspan="3" scope="row">Куплений</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">IsBooked</th>
+                                    <td colspan="3" scope="row">Заброньований</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" scope="row" class="table-header">Методи</th>
+                                    <th colspan="3" scope="row" class="table-header">Опис методів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Place()</th>
+                                    <td colspan="3" scope="row">Конструктор за замовчуванням</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Place(plane, price)</th>
+                                    <td colspan="3" scope="row">Конструктор ініціалізації (за літаком та ціною)</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Book(customer)</th>
+                                    <td colspan="3" scope="row">Бронювання місця клієнтом</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Buy(customer)</th>
+                                    <td colspan="3" scope="row">Купівля місця клієнтом</th>
+                                </tr>
+                                <tr class="divider">
+                                    <td colspan="2" scope="row">CancelBooking()</th>
+                                    <td colspan="3" scope="row">Відміна бронювання</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="11" scope="rowgroup" class="center divider">
+                                        Літак
+                                    </th>
+                                    <th colspan="2" scope="row" class="table-header">Атрибут</th>
+                                    <th colspan="3" scope="row" class="table-header">Призначення атрибутів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Flight</th>
+                                    <td colspan="3" scope="row">Посилання на рейс</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Places</th>
+                                    <td colspan="3" scope="row">Перелік місць</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" scope="row" class="table-header">Методи</th>
+                                    <th colspan="3" scope="row" class="table-header">Опис методів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Plane()</th>
+                                    <td colspan="3" scope="row">Конструктор за замовчуванням</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Plane(flight)</th>
+                                    <td colspan="3" scope="row">Конструктор ініціалізації (за рейсом)</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Plane(places)</th>
+                                    <td colspan="3" scope="row">Конструктор ініціалізації (за місцями)</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Plane(flight, places)</th>
+                                    <td colspan="3" scope="row">Конструктор ініціалізації (за рейсом та місцями)</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">GetPlaces()</th>
+                                    <td colspan="3" scope="row">Отримання переліку усіх місць</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">GetFreePlaces()</th>
+                                    <td colspan="3" scope="row">Отримання переліку вільних місць</th>
+                                </tr>
+                                <tr class="divider">
+                                    <td colspan="2" scope="row">GetBookedPlaces()</th>
+                                    <td colspan="3" scope="row">Отримання переліку заброньованих місць</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="5" scope="rowgroup" class="center divider">
+                                        Кінцевий пункт
+                                    </th>
+                                    <th colspan="2" scope="row" class="table-header">Атрибут</th>
+                                    <th colspan="3" scope="row" class="table-header">Призначення атрибутів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Name</th>
+                                    <td colspan="3" scope="row">Назва пункту</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" scope="row" class="table-header">Методи</th>
+                                    <th colspan="3" scope="row" class="table-header">Опис методів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Endpoint()</th>
+                                    <td colspan="3" scope="row">Конструктор за замовчуванням</th>
+                                </tr>
+                                <tr class="divider">
+                                    <td colspan="2" scope="row">Endpoint(name)</th>
+                                    <td colspan="3" scope="row">Конструктор ініціалізації (за назвою)</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="11" scope="rowgroup" class="center divider">
+                                        Рейс
+                                    </th>
+                                    <th colspan="2" scope="row" class="table-header">Атрибут</th>
+                                    <th colspan="3" scope="row" class="table-header">Призначення атрибутів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Name</th>
+                                    <td colspan="3" scope="row">Назва</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Destination</th>
+                                    <td colspan="3" scope="row">Посилання на пункт прибуття</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">DestinationTime</th>
+                                    <td colspan="3" scope="row">Час прибуття</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Departure</th>
+                                    <td colspan="3" scope="row">Посилання на пункт відправлення</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">DepartureTime</th>
+                                    <td colspan="3" scope="row">Час відправлення</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" scope="row" class="table-header">Методи</th>
+                                    <th colspan="3" scope="row" class="table-header">Опис методів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Flight()</th>
+                                    <td colspan="3" scope="row">Конструктор за замовчуванням</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Flight(name)</th>
+                                    <td colspan="3" scope="row">Конструктор ініціалізації (за назвою)</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Flight(name, destination, destinationTime)</th>
+                                    <td colspan="3" scope="row">Конструктор ініціалізації (за назвою, пунктом прибуття та часом прибуття)</th>
+                                </tr>
+                                <tr class="divider">
+                                    <td colspan="2" scope="row">Flight(name, destination, destinationTime, departure, departureTime)</th>
+                                    <td colspan="3" scope="row">Конструктор ініціалізації (за назвою, пунктом прибуття, часом прибуття, пунктом відправлення та часом відправлення)</th>
+                                </tr>                                
+                                <tr>
+                                    <th rowspan="23" scope="rowgroup" class="center divider">
+                                        Система бронювання
+                                    </th>
+                                    <th colspan="2" scope="row" class="table-header">Атрибут</th>
+                                    <th colspan="3" scope="row" class="table-header">Призначення атрибутів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Flights</th>
+                                    <td colspan="3" scope="row">Перелік рейсів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Planes</th>
+                                    <td colspan="3" scope="row">Перелік літаків</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Customers</th>
+                                    <td colspan="3" scope="row">Перелік клієнтів</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" scope="row" class="table-header">Методи</th>
+                                    <th colspan="3" scope="row" class="table-header">Опис методів</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">BookingSystem()</th>
+                                    <td colspan="3" scope="row">Конструктор за замовчуванням</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">GetFlight(index)</th>
+                                    <td colspan="3" scope="row">Отримання рейсу за індексом</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">GetFlight(id)</th>
+                                    <td colspan="3" scope="row">Отримання рейсу за ідентифікатором</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">AddFlight(flight)</th>
+                                    <td colspan="3" scope="row">Створення нового рейсу</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">RemoveFlight(id)</th>
+                                    <td colspan="3" scope="row">Видалення рейсу за ідентифікатором</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">EditFlight(id, flight)</th>
+                                    <td colspan="3" scope="row">Редагування рейсу</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">AddEndpoint(endpoint)</th>
+                                    <td colspan="3" scope="row">Створення нового кінцевого пункту</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">RemoveEndpoint(id)</th>
+                                    <td colspan="3" scope="row">Видалення кінцевого пункту за ідентифікатором</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">EditEndpoint(id, endpoint)</th>
+                                    <td colspan="3" scope="row">Редагування кінцевого пункту</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">GetFlightsByDeparture(departure)</th>
+                                    <td colspan="3" scope="row">Отримання рейсів за пунктом відправлення</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">GetFlightByDestination(destination)</th>
+                                    <td colspan="3" scope="row">Отримання рейсів за пунктом прибуття</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">AddPlane(plane)</th>
+                                    <td colspan="3" scope="row">Створення нового літака</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">RemovePlane(planeId)</th>
+                                    <td colspan="3" scope="row">Видалення літаку за ідентифікатором</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">EditPlane(id, plane)</th>
+                                    <td colspan="3" scope="row">Редагування літаку</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">GetPlanesByFlight(flightId)</th>
+                                    <td colspan="3" scope="row">Отримання літаків за ідентифікатором рейсу</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Register(user)</th>
+                                    <td colspan="3" scope="row">Реєстрація нового користувача</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" scope="row">Login(login, password)</th>
+                                    <td colspan="3" scope="row">Авторизація за логіном та паролем</th>
+                                </tr>
+                                <tr class="divider">
+                                    <td colspan="2" scope="row">ChangeUserSettings(id, user)</th>
+                                    <td colspan="3" scope="row">Зміна налаштувань користувача</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     
-                    <p>
-                        <span class="title">Проектування структури ПЗ: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="2.2">
+                        <span class="title">2.2 UML-діаграма класів: </span>
+                   
+                        <div class="flex center">
+                            <img src="assets/classdiagram.png"/>
+                        </div>
+                    </div>
                 </div>
+
+                <div id="3" class="item">
+                    <h3 class="title">Кодування ПЗ (програмування)</h3>
+                    
+                    <div id="3.1">
+                        <span class="title">3.1 Файлова структура проекту: </span>
+                        
+                        <div class="flex center">
+                            <img src="assets/project-structure.png"/>
+                        </div>
+                    </div>
+
+                    <div id="3.2">
+                        <span class="title">3.2 Програмні коди класів з конструкторами: </span>
+
+                        <div class="flex" style="flex-wrap: wrap;">
+                            <img src="assets/v2_bs.png"/>
+                            <span class="title center">Booking System</span>
+                            <img src="assets/v2_user.png"/>
+                            <span class="title center">User</span>
+                            <img src="assets/v2_plane.png"/>
+                            <span class="title center">Plane</span>
+                            <img src="assets/v2_place.png"/>
+                            <span class="title center">Place</span>
+                            <img src="assets/v2_flight.png"/>
+                            <span class="title center">Flight</span>
+                            <img src="assets/v2_endpoint.png"/>
+                            <span class="title center">Endpoint</span>
+                            <img src="assets/v2_entity.png"/>
+                            <span class="title center">Entity</span>
+                        </div>
+                    </div>
+
+                    <div id="3.3">
+                        <span class="title">3.3 Програмний код класу Program. Результат виконання програми: </span>
+                    
+                        <div class="flex horizontal-alignment images-wrapper">
+                            <div class="flex center">
+                                <img src="assets/version2_program.png"/>
+                            </div>
+    
+                            <div class="flex center">
+                                <img src="assets/version2_output.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="4" class="item">
-                    <h3 class="title">Кодування (програмування)</h3>
-                    
-                    <p>
-                        <span class="title">Файлова структура проекту: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
-                    
-                    <p>
-                        <span class="title">Специфікації методів: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
-                </div>
-                <div id="5" class="item">
                     <h3 class="title">Впровадження та супроводження ПЗ</h3>
 
-                    <p>
-                        <a href="https://github.com/Artemissio/RailwayTicketsSalesManagement" class="title">
+                    <div id="4.1" class="vertical-alignment" style="display: block;">
+                        <a href="https://github.com/Artemissio/AviaTicketsSalesManagement" class="title">
                             Посилання на репозиторій проекту
                         </a>
-                    </p>
+                        <br>
+                        <a href="program/aviasales_v2.exe">
+                            Download
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

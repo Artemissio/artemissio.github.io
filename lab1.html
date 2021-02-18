@@ -57,166 +57,649 @@
 
         <div class="main">
             <div id="menu">
-                <a class="menu-item flex active-link" onclick="ChangeTab(this, '1')">Характеристика об’єкта автоматизації</a>
-                <a class="menu-item flex" onclick="ChangeTab(this, '2')">Об’єктно-орієнтована декомпозиція предметного середовища</a>
-                <a class="menu-item flex" onclick="ChangeTab(this, '3')">Проектування ПЗ</a>
-                <a class="menu-item flex" onclick="ChangeTab(this, '4')">Кодування (програмування)</a>
-                <a class="menu-item flex" onclick="ChangeTab(this, '5')">Впровадження та супроводження ПЗ</a>
+                <div>
+                    <a class="menu-item flex active-link" onclick="ShowSubmenus(this)">
+                        Характеристика об’єкта автоматизації
+                        <i class="material-icons">remove</i>
+                    </a>
+                    <a class="sub-menu sub-menu-visible active-link" onclick="ShowSection(this, '1', '1.1')">
+                        1.1 Детальний опис предметного середовища
+                    </a>
+                    <a class="sub-menu sub-menu-visible" onclick="ShowSection(this, '1', '1.2')">
+                        1.2 Мета розробки проекту
+                    </a>
+                    <a class="sub-menu sub-menu-visible" onclick="ShowSection(this, '1', '1.3')">
+                        1.3 Бізнес-задачі
+                    </a>
+                    <a class="sub-menu sub-menu-visible" onclick="ShowSection(this, '1', '1.4')">
+                        1.4 Бізнес-процеси
+                    </a>
+                    <a class="sub-menu sub-menu-visible" onclick="ShowSection(this, '1', '1.5')">
+                        1.5 Сценарій дій системи
+                    </a>
+                </div>
+
+                <div>
+                    <a class="menu-item flex" onclick="ShowSubmenus(this)">
+                        Об’єктно-орієнтована декомпозиція предметного середовища
+                        <i class="material-icons">add</i>
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '2', '2.1')">
+                        2.1 Лексичний та семантичний аналіз
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '2', '2.2')">
+                        2.2 Об’єктно-орієнтовна декомпозиція
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '2', '2.3')">
+                        2.3 Функціональні вимоги замовника
+                    </a>
+                </div>
+
+                <div>
+                    <a class="menu-item flex" onclick="ShowSubmenus(this)">
+                        Проектування ПЗ
+                        <i class="material-icons">add</i>
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '3', '3.1')">
+                        3.1 Проектування структури ПЗ
+                    </a>
+                </div>
+
+                <div>
+                    <a class="menu-item flex" onclick="ShowSubmenus(this)">
+                        Кодування (програмування)
+                        <i class="material-icons">add</i>
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '4', '4.1')">
+                        4.1 Файлова структура проекту
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '4', '4.2')">
+                        4.2 Специфікації методів
+                    </a>
+                </div>
+
+                <div>
+                    <a class="menu-item flex" onclick="ShowSubmenus(this)">
+                        Впровадження та супроводження ПЗ
+                        <i class="material-icons">add</i>                        
+                    </a>
+                    <a class="sub-menu" onclick="ShowSection(this, '5', '5.1')">
+                        5.1 Посилання на проект
+                    </a>
+                </div>
             </div>
     
             <div id="content">
                 <div id="1" class="active-item">
                     <h3 class="title">Характеристика об’єкта автоматизації</h3>
 
-                    <p>
-                        <span class="title">Детальний опис предметного середовища: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="1.1" class="active-paragraph">
+                        <span class="title">1.1 Детальний опис предметного середовища: </span>
+                        <p>Об'єктом автоматизації є електронний продаж та резервування авіа квитків</p>
+                        <p>Клієнт має можливість авторизуватися в системі, переглянути усі можливі рейси 
+                           або знайти рейс за місцем відправлення/прибуття, знайти за даним рейсом усі літаки.
+                        </p>
+                        <p>
+                            На наступному етапі клієнт може переглянути усі місця у даному літаку (або лише вільні/заброньовані),
+                            вибрати місце та забронювати його або купити (за умови, що дане місце вільне). 
+                            Якщо клієнт бронює місце, він має можливість відмінити бронювання у будь-який момент. 
+                            Якщо він його купує, відмінити купівлю неможливо. Заброньовані та куплені квитки відображатимуться
+                            у профілі користувача.
+                        </p>
+                        <p>
+                            Крім того, за необхідності, клієнт має можливість змінити свої дані 
+                            (ім'я, прізвище, логін та пароль).
+                        </p>
+                        <p>
+                            Адміністратор системи надає інформацію про рейси, літаки, має можливість редагувати дані компоненти,
+                            переглядати інформацію про користувачів, а також, як і користувачі, має можливість
+                            купувати та бронювати квитки.  
+                        </p>
 
-                    <p>
-                        <span class="title">Мета розробки проекту: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                        <p>
+                            Про кожне місце відома його ціна, стан (заброньоване, куплене або вільне), та, у випадку
+                            бронювання або купівлі, адміністратору відома інформація про користувача, який забронював або купив 
+                            дане місце.
+                            Про кожний літак відомий його рейс, та кількість місць.
+                            Про кожний рейс відома його назва, пункти відправлення і прибуття та час відправлення і прибуття.
+                            Кожний пункт має свою назву. 
+                        </p>
+                    </div>
 
-                    <p>
-                        <span class="title">Бізнес-задачі, що моделюються в системі, для досягнення мети: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="1.2">
+                        <span class="title">1.2 Мета розробки проекту: </span>
+                        
+                        <p>
+                            1. Прискорити та полегшити можливість користувачам дізнаватися інформацію про рейси.
+                            <br>
+                            2. Надати користувача зручний та швидкий механізм купівлі/бронювання квитків на літаки.
+                            <br>
+                            3. Надати зручний механізм адміністрування системою загалом.
+                            <br>
+                            4. За рахунок автоматизації процесів бронювання/купівлі/адміністрування мінімізувати
+                            необхідність присутності людини.
+                        </p>
+                    </div>
 
-                    <p>
-                        <span class="title">Бізнес-процеси, що здійснюються в системі: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="1.3">
+                        <span class="title">1.3 Бізнес-задачі, що моделюються в системі, для досягнення мети: </span>
 
-                    <p>
-                        <span class="title">Сценарій дій системи: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                        <p>
+                            1. Пошук рейсу
+                            <br>
+                            2. Пошук літака
+                            <br>
+                            3. Забронювати/купити місце
+                        </p>
+                    </div>
+
+                    <div id="1.4">
+                        <span class="title">1.4 Бізнес-процеси, що здійснюються в системі: </span>
+
+                        <p>
+                            1.1 Вказати напрям
+                            <br>
+                            1.2 Вказати дату
+                            <br>
+                            2.1 Обрати напрям
+                            <br>
+                            2.2 Обрати дату
+                            <br>
+                            2.3 Обрати літак
+                            <br>
+                            2.4 Обрати місце
+                            <br>
+                            3.1 Забронювати або купити місце
+                        </p>
+                    </div>
+
+                    <div id="1.5">
+                        <span class="title">1.5 Сценарій дій системи: </span>
+                        
+                        <p>
+                            1. Користувач виконує авторизацію
+                            <br>
+                            2. Знаходить необхідний рейс (за місцем відправлення/прибуття або часом)
+                            <br>
+                            3. За знайденим рейсом знаходить літаки
+                            <br>
+                            4. У знайдених літаках перегладає місця
+                            <br>
+                            5. Обирає літак, що підходить користувачеві
+                            <br>
+                            6. У обраному літаку обирає місце
+                            <br>
+                            7. Бронює або купує обране місце
+                            <br>
+                            8. Підтверджує обрані налаштування
+                            <br>
+                            9. Квиток відображається у профілі користувача
+                        </p>
+                    </div>
                 </div>
                 <div id="2" class="item">
                     <h3 class="title">Об’єктно-орієнтована декомпозиція предметного середовища</h3>
 
-                    <p>
-                        <span class="title">Лексичний та семантичний аналіз опису об’єкту управління: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="2.1">
+                        <span class="title">2.1 Лексичний та семантичний аналіз опису об’єкту управління: </span>
+                        
+                        <p>
+                            Результати лінгвістичного інформаційного аналізу у вигляді таблиці іменників 
+                            (іменникових груп), претендентів на роль класів та атрибутів та таблиці
+                            дієслів (дієслівних груп), претендентів на роль зв'язків та методів класів
+                        </p>
+                        
+                        <div class="flex horizontal-alignment">
+                            <a class="table-choice" onclick="ChangeTable(this, '2.1.1')">
+                                Таблиця іменників
+                            </a>
+                            <a class="table-choice" onclick="ChangeTable(this, '2.1.2')">
+                                Таблиця дієслів
+                            </a>
+                        </div>
+
+                        <table id="2.1.1" class="table-invisible">
+                            <thead>
+                                <tr>
+                                    <th>Іменник</th>
+                                    <th>Відношення до ООА</th>
+                                    <th>Пояснення</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Система бронювання</td>
+                                    <td>Клас</td>
+                                    <td>Моделює роботу системи бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Користувач</td>
+                                    <td>Клас</td>
+                                    <td>Описує клієнта</td>
+                                </tr>
+                                <tr>
+                                    <td>Рейс</td>
+                                    <td>Клас</td>
+                                    <td>Описує рейс</td>
+                                </tr>
+                                <tr>
+                                    <td>Літак</td>
+                                    <td>Клас</td>
+                                    <td>Описує літак</td>
+                                </tr>
+                                <tr>
+                                    <td>Кінцева точка</td>
+                                    <td>Клас</td>
+                                    <td>Описує пункт відправлення/прибуття</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>Місце</td>
+                                    <td>Клас</td>
+                                    <td>Описує місце у літаку</td>
+                                </tr>
+                                <tr>
+                                    <td>Ім'я</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу користувач</td>
+                                </tr>
+                                <tr>
+                                    <td>Прізвище</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу користувач</td>
+                                </tr>
+                                <tr>
+                                    <td>Повне ім'я</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу користувач</td>
+                                </tr>
+                                <tr>
+                                    <td>Логін</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу користувач</td>
+                                </tr>
+                                <tr>
+                                    <td>Пароль</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу користувач</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>Список заброньованих місць</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу користувач</td>
+                                </tr>
+                                <tr>
+                                    <td>Посилання на літак</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу місце</td>
+                                </tr>
+                                <tr>
+                                    <td>Посилання на користувача</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу місце</td>
+                                </tr>
+                                <tr>
+                                    <td>Ціна</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу місце</td>
+                                </tr>
+                                <tr>
+                                    <td>Заброньоване</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу місце</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>Куплене</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу місце</td>
+                                </tr>
+                                <tr>
+                                    <td>Посилання на рейс</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу літак</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>Список місць</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу літак</td>
+                                </tr>
+                                <tr>
+                                    <td>Назва</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу рейс</td>
+                                </tr>
+                                <tr>
+                                    <td>Посилання на пункт прибуття</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу рейс</td>
+                                </tr>
+                                <tr>
+                                    <td>Час прибуття</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу рейс</td>
+                                </tr>
+                                <tr>
+                                    <td>Посилання на пункт відправлення</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу рейс</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>Час відправлення</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу рейс</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>Назва пункту</td>
+                                    <td>Атрибут</td>
+                                    <td>Атрибут класу кінцева точка</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <table id="2.1.2" class="table-invisible">
+                            <thead>
+                                <tr>
+                                    <th>Дієслово</th>
+                                    <th>Критерій належності до класу</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Отримати список усіх місць</td>
+                                    <td>Метод класу літак</td>
+                                </tr>
+                                <tr>
+                                    <td>Отримати список вільних місць</td>
+                                    <td>Метод класу літак</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>Отримати список заброньованих місць</td>
+                                    <td>Метод класу літак</td>
+                                </tr>
+                                <tr>
+                                    <td>Забронювати</td>
+                                    <td>Метод класу місце</td>
+                                </tr>
+                                <tr>
+                                    <td>Купити</td>
+                                    <td>Метод класу місце</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>Відмінити бронювання</td>
+                                    <td>Метод класу місце</td>
+                                </tr>
+                                <tr>
+                                    <td>Отримати рейс</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Додати рейс</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Відредагувати рейс</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Видалити рейс</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Отримати список літаків за рейсом</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Додати літак</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Відредагувати літак</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Видалити літак</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Додати кінцевий пункт</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Відредагувати кінцевий пункт</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Видалити кінцевий пункт</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Отримати рейси за пунктом прибуття</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Отримати рейси за пунктом відправлення</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Зареєструвати користувача</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr>
+                                    <td>Авторизувати користувача</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>Змінити налаштування користувача</td>
+                                    <td>Метод класу система бронювання</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     
-                    <p>
-                        <span class="title">Об’єктно-орієнтовна декомпозиція предметного середовища: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="2.2">
+                        <span class="title">2.2 Об’єктно-орієнтовна декомпозиція предметного середовища: </span>
+                   
+                    </div>
                     
-                    <p>
-                        <span class="title">Функціональні вимоги замовника: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="2.3">
+                        <span class="title">2.3 Функціональні вимоги замовника: </span>
+
+                        <div class="flex center">
+                            <img src="assets/usecase.png"/>
+                        </div>
+                    </div>
                 </div>
+
                 <div id="3" class="item">
                     <h3 class="title">Проектування ПЗ</h3>
                     
-                    <p>
-                        <span class="title">Проектування структури ПЗ: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="3.1">
+                        <span class="title">3.1 Проектування структури ПЗ: </span>
+                      
+                        <div class="flex center">
+                            <img src="assets/classdiagram.png"/>
+                        </div>
+                    </div>
                 </div>
+
                 <div id="4" class="item">
                     <h3 class="title">Кодування (програмування)</h3>
                     
-                    <p>
-                        <span class="title">Файлова структура проекту: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="4.1">
+                        <span class="title">4.1 Файлова структура проекту: </span>
+
+                        <div class="flex center">
+                            <img src="assets/project-structure.png"/>
+                        </div>
+                    </div>
                     
-                    <p>
-                        <span class="title">Специфікації методів: </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint non natus assumenda. 
-                        Inventore doloremque, cum soluta illum minima maiores accusantium rem eos, ex libero ea 
-                        quis vero quia facilis atque dolor cupiditate eum sequi at iste natus. Eos, fugit molestiae 
-                        distinctio alias, iste eligendi deserunt sapiente sequi non dolores nulla modi doloremque 
-                        consequuntur totam voluptatibus omnis libero exercitationem aliquid. Temporibus, veniam tempora 
-                        officiis ipsam nisi impedit hic corporis incidunt suscipit praesentium, et non dolorem repellendus
-                        aspernatur at! Minima deserunt quod magnam repudiandae quam dolore esse nulla quas quos nesciunt
-                        accusantium possimus quibusdam unde mollitia id, eum cupiditate est, voluptatibus laborum!
-                    </p>
+                    <div id="4.2">
+                        <span class="title">4.2 Специфікації методів: </span>
+                        
+                        <table style="font-size: 12px; line-break: anywhere;">
+                            <thead>
+                                <tr>
+                                    <th>Прототип функції</th>
+                                    <th>Семантика функції</th>
+                                    <th>Параметри</th>
+                                    <th>Призначення (семантика) параметрів</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Flight BookingSystem::GetFlight(int index)</td>
+                                    <td>Отримати рейс із списку за індексом</td>
+                                    <td>int index</td>
+                                    <td>Індекс рейсу у списку</td>
+                                </tr>
+                                <tr>
+                                    <td>Flight BookingSystem::GetFlight(string id)</td>
+                                    <td>Отримати рейс із списку за ідентифікатором</td>
+                                    <td>string id</td>
+                                    <td>Ідентифікатор рейсу</td>
+                                </tr>
+                                <tr>
+                                    <td>void BookingSystem::AddFlight(Flight flight)</td>
+                                    <td>Додати рейс до переліку</td>
+                                    <td>Flight flight</td>
+                                    <td>Рейс</td>
+                                </tr>
+                                <tr>
+                                    <td>void BookingSystem::RemoveFlight(string id)</td>
+                                    <td>Видалити рейс із переліку за ідентифікатором</td>
+                                    <td>string id</td>
+                                    <td>Ідентифікатор рейсу</td>
+                                </tr>
+                                <tr>
+                                    <td>void BookingSystem::EditFlight(string id, Flight flight)</td>
+                                    <td>Відредагувати рейс</td>
+                                    <td>string id, Flight flight</td>
+                                    <td>Ідентифікатор рейсу, нові налаштування рейсу</td>
+                                </tr>
+                                <tr>
+                                    <td>void BookingSystem::AddEndpoint(Endpoint endpoint)</td>
+                                    <td>Додати кінцевий пункт до переліку</td>
+                                    <td>Endpoint endpoint</td>
+                                    <td>Кінцевий пункт</td>
+                                </tr>
+                                <tr>
+                                    <td>void BookingSystem::RemoveEndpoint(string id)</td>
+                                    <td>Видалити кінцевий пункт із переліку за ідентифікатором</td>
+                                    <td>string id</td>
+                                    <td>Ідентифікатор кінцевого пункту</td>
+                                </tr>
+                                <tr>
+                                    <td>void BookingSystem::EditEndpoint(string id, Endpoint endpoint)</td>
+                                    <td>Відредагувати кінцевий пункт</td>
+                                    <td>string id, Endpoint endpoint</td>
+                                    <td>Ідентифікатор кінцевогоіі пункту, нові налаштування кінцевого пункту</td>
+                                </tr>
+                                <tr>
+                                    <td>List&lt;Flight&gt; BookingSystem::GetFlightsByDeparture(Endpoint departure)</td>
+                                    <td>Отримати список рейсів за пунктом відправлення</td>
+                                    <td>Endpoint departure</td>
+                                    <td>Пункт відправлення</td>
+                                </tr>
+                                <tr>
+                                    <td>List&lt;Flight&gt; BookingSystem::GetFlightByDestination(Endpoint destination)</td>
+                                    <td>Отримати список рейсів за пунктом прибуття</td>
+                                    <td>Endpoint destination</td>
+                                    <td>Пункт прибуття</td>
+                                </tr>
+                                <tr>
+                                    <td>void BookingSystem::AddPlane(Plane plane)</td>
+                                    <td>Додати літак до переліку</td>
+                                    <td>Plane plane</td>
+                                    <td>Літак</td>
+                                </tr>
+                                <tr>
+                                    <td>void BookingSystem::RemovePlane(string id)</td>
+                                    <td>Видалити літак із переліку за ідентифікатором</td>
+                                    <td>string id</td>
+                                    <td>Ідентифікатор літаку</td>
+                                </tr>
+                                <tr>
+                                    <td>void BookingSystem::EditPlane(string id, Plane plane)</td>
+                                    <td>Відредагувати літак</td>
+                                    <td>string id, Plane plane</td>
+                                    <td>Ідентифікатор літаку, нові налаштування літаку</td>
+                                </tr>
+                                <tr>
+                                    <td>List&lt;Plane&gt; BookingSystem::GetPlanesByFlight(string id)</td>
+                                    <td>Отримати список літаків за ідентифікатором рейсу</td>
+                                    <td>string id</td>
+                                    <td>Ідентифікатор рейсу</td>
+                                </tr>
+                                <tr>
+                                    <td>void BookingSystem::Register(User user)</td>
+                                    <td>Зареєструвати користувача</td>
+                                    <td>User user</td>
+                                    <td>Новий користувач</td>
+                                </tr>
+                                <tr>
+                                    <td>User BookingSystem::Login(string login, string password)</td>
+                                    <td>Авторизація користувача за логіном та паролем</td>
+                                    <td>string login, string password</td>
+                                    <td>Логін, пароль</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>void BookingSystem::ChangeUserSettings(string id, User user)</td>
+                                    <td>Зміна налаштувань користувача</td>
+                                    <td>string id, User user</td>
+                                    <td>Ідентифікатор користувача, нові налаштування користувача</td>
+                                </tr>
+                                <tr>
+                                    <td>void Place::Book(User user)</td>
+                                    <td>Бронювання місця</td>
+                                    <td>User user</td>
+                                    <td>Користувач, що бронює місце</td>
+                                </tr>
+                                <tr>
+                                    <td>void Place::Buy(User user)</td>
+                                    <td>Купівля місця</td>
+                                    <td>User user</td>
+                                    <td>Користувач, що купує місце</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>void Place::CancelBooking()</td>
+                                    <td>Відміна бронювання</td>
+                                    <td>Без параметрів</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>IReadOnlyList&lt;Place&gt; Plane::GetPlaces()</td>
+                                    <td>Отримати список усіх місць</td>
+                                    <td>Без параметрів</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>IReadOnlyList&lt;Place&gt; Plane::GetFreePlaces()</td>
+                                    <td>Отримати список вільних місць</td>
+                                    <td>Без параметрів</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr class="divider">
+                                    <td>IReadOnlyList&lt;Place&gt; Plane::GetBookedPlaces()</td>
+                                    <td>Отримати список заброньованих місць</td>
+                                    <td>Без параметрів</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+
                 <div id="5" class="item">
                     <h3 class="title">Впровадження та супроводження ПЗ</h3>
 
-                    <p>
-                        <a href="https://github.com/Artemissio/RailwayTicketsSalesManagement" class="title">
+                    <div id="5.1" class="vertical-alignment" style="display: block;">
+                        <a href="https://github.com/Artemissio/AviaTicketsSalesManagement" class="title">
                             Посилання на репозиторій проекту
                         </a>
-                    </p>
+                        <br>
+                        <a href="program/aviasales_v1.exe">
+                            Download
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

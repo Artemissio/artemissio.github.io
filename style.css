@@ -1,5 +1,16 @@
-body{
+*{
     font-family: 'Ubuntu';
+}
+
+button{
+    border-color: transparent;
+}
+
+.images-wrapper > img{
+    margin-bottom: 12px;
+}
+
+body{
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -16,7 +27,7 @@ body{
 }
 
 body.image{
-    background-image: url(mountains.jpg);
+    background-image: url(assets/mountains.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -30,6 +41,41 @@ body.image div#main{
 body.image div#main i{
     font-size: 8rem;
 }
+
+table {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+    table td, table th {
+        padding: .75rem;
+        vertical-align: top;
+        border: 1px solid var(--scrollbar);
+        border-width: 1px;
+    }
+
+    table > thead > tr, .table-header {
+        background: var(--link);
+        color: var(--whitesmoke);
+    }
+
+    tr.divider, th.divider{
+        border-bottom: 2px solid var(--link);
+    }
+
+    th.center{
+        vertical-align: middle;
+        min-width: 100px;
+    }
+
+    table.table-visible{
+        display: block;
+    }
+
+    table.table-invisible{
+        display: none;
+    }
 
 footer{
     background: var(--whitesmoke);
@@ -227,16 +273,9 @@ a:hover{
     width: 100%;
     flex: 1 1 auto;
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 300px 1fr;
     /* overflow-y: auto; */
 }
-
-/* #main{
-    background-image: url(mountains.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-} */
 
 #main h1{
     line-height: 2.5rem;
@@ -256,14 +295,28 @@ a:hover{
 .menu-item{
     color: var(--silver);
     min-height: 36px;
-    flex-wrap: wrap;
-    padding: 6px;
+    padding: 6px;    
+    justify-content: space-between;
+    align-items: center;
 }
 
-    .menu-item:hover{
+.sub-menu{
+    min-height: 32px;
+    margin-left: 24px;
+    padding: 2px;
+    color: var(--silver);
+    display: none;
+}
+
+.sub-menu-visible{
+    display: block !important;
+}
+
+    .menu-item:hover, .sub-menu:hover, .sub-menu-visible:hover{
         color: var(--main);
         cursor: pointer;
     }
+
 
 .active-link{
     color: var(--main);
@@ -281,13 +334,52 @@ a:hover{
     .active-item > h3.title, .active-item span.title{
         font-weight: bold;
         color: var(--dark);
+        margin-bottom: 10px;
     }
 
     .active-item > h3.title{
         color: var(--link);
         margin-left: 2rem;
         margin-bottom: 0;
+        text-align: left;
     }
+
+    .active-item > div{
+        margin-top: 20px;
+        display: none;
+    }
+
+    .active-item > div > p{
+        margin: 10px 0 0 0;
+    }
+
+    .active-item > div.active-paragraph{
+        display: flex;
+        flex-direction: column;
+    }
+
+.table-choice{
+    border-radius: 6px;
+    background-color: var(--whitesmoke);
+    margin: 20px 10px 0 0;
+    padding: 0.7rem;
+    color: var(--dark);
+    border: 1px solid var(--dark);
+}
+
+.table-choice.active, .table-choice.active:hover{
+    background: var(--choice-button);
+    color: var(--main);
+}
+
+.table-choice.active{
+    border: 1px solid var(--main);
+}
+
+.table-choice:hover{
+    background: var(--choice-button);
+    cursor: pointer;
+}
 
 #content{
     padding: 6px;
@@ -302,6 +394,10 @@ a:hover{
     .lab-item{
         padding: 5px 10px;
         margin: 5px 3px;
+    }
+
+    .images-wrapper{
+        flex-direction: column;
     }
 }
 
